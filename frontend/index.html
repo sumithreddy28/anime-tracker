@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Anime Tracker</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="user-box">
+  <span id="userEmail">user@example.com</span>
+  <button id="logout" class="logout">Logout</button>
+</div>
+
+    <div class="ambient-stickers">
+  <img src="../stickers/lone_guts.png" class="sticker s1" alt="Guts">
+</div>
+
+    <div class="container">
+      <h1>My Anime Tracker</h1>
+
+      <!-- ADD SECTION -->
+      <form id="animeForm" class="anime-form">
+        <input
+          type="text"
+          id="title"
+          placeholder="Anime title"
+          required
+        />
+        <input
+          type="number"
+          id="season"
+          placeholder="Season"
+          min="1"
+          required
+        />
+        <input
+          type="number"
+          id="episode"
+          placeholder="Episode"
+          min="0"
+          required
+        />
+        <select id="status">
+          <option value="watching">Watching</option>
+          <option value="completed">Completed</option>
+          <option value="paused">On Hold</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+<br/>
+      <hr />
+<br/>
+      <!-- SEARCH SECTION -->
+      <div class="search-section">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search anime..."
+        />
+        <ul id="searchResults" class="anime-list"></ul>
+      </div>
+<br/>
+      <hr />
+<br/>
+      <!-- TABS + LISTS -->
+      <div class="list-section">
+  <div class="tabs">
+    <button class="tab active" data-tab="watching">Watching</button>
+    <button class="tab" data-tab="completed">Completed</button>
+    <button class="tab" data-tab="paused">On Hold</button>
+
+    <select id="sort">
+      <option value="updated">Sort: Last Updated</option>
+      <option value="title">Sort: Title</option>
+    </select>
+  </div>
+
+  <ul id="animeList" class="anime-list"></ul>
+</div>
+
+<br/>
+      <hr />
+      <footer>
+        <p>&copy; 2024 My Anime Tracker by Sumith</p>
+      </footer>
+
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

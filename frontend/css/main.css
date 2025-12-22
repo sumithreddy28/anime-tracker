@@ -1,0 +1,307 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0b0b0c;
+  color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 900px;        /* slightly narrower */
+  padding: 24px;           /* was 32px */
+  position: relative;
+  z-index: 1;
+}
+
+/* HEADINGS */
+h1 {
+  text-align: center;
+  margin-bottom: 18px;     /* was 24px */
+  font-size: 24px;         /* medium heading */
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;               /* was 12px */
+}
+
+input,
+select {
+  padding: 10px 12px;      /* was 14px */
+  border-radius: 6px;
+  border: 1px solid #2a2a2a;
+  background: #111;
+  color: #e6e6e6;
+  font-size: 14px;         /* explicit medium font */
+}
+
+button {
+  padding: 10px 12px;      /* was 14px */
+  border-radius: 6px;
+  border: none;
+  background: #e6e6e6;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button.danger {
+  background: #2a2a2a;
+  color: #e6e6e6;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;               /* was 12px */
+  margin: 18px 0;          /* was 24px */
+}
+
+.tab {
+  background: transparent;
+  border: 1px solid #333;
+  color: #aaa;
+  padding: 6px 12px;       /* was 8px 16px */
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.tab.active {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* LIST */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 8px;
+  padding: 14px;           /* was 20px */
+  margin-bottom: 10px;     /* was 14px */
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;               /* was 24px */
+}
+
+/* LEFT */
+.card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;                /* was 4px */
+}
+
+.anime-title {
+  font-size: 15px;         /* was 18px */
+  font-weight: 600;
+}
+
+.anime-time {
+  font-size: 11px;         /* was 12px */
+  color: #888;
+}
+
+/* RIGHT */
+.card-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;                /* was 10px */
+}
+
+.anime-ep {
+  font-size: 13px;         /* was 14px */
+  color: #ccc;
+}
+
+.card-right button,
+.card-right select {
+  height: 30px;            /* was 34px */
+  padding: 4px 8px;        /* was 4px 10px */
+  font-size: 13px;
+}
+
+.card-right .ep {
+  background: #1f1f1f;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.card-right select {
+  background: #111;
+  color: #e6e6e6;
+  border: 1px solid #333;
+}
+
+.card-right .danger {
+  background: transparent;
+  color: #aaa;
+}
+
+.card-right .danger:hover {
+  color: #ff4d4d;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 28px;        /* was 40px */
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* STICKERS */
+.ambient-stickers {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.sticker {
+  position: absolute;
+  width: 220px;            /* was 260px */
+  opacity: 0.22;
+  filter: brightness(1.6) contrast(1.25);
+}
+
+.sticker.s1 {
+  top: 28%;
+  left: 18%;
+}
+
+/* PROGRESS */
+.anime-progress {
+  margin-top: 4px;         /* was 6px */
+  font-size: 12px;         /* ~0.8rem */
+  color: #ccc;
+}
+
+.progress-bar {
+  width: 130px;            /* was 150px */
+  height: 4px;             /* was 6px */
+  background: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 2px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4caf50;
+}
+
+/* LOGOUT (old center style – not used for top pill anymore, but kept) */
+.logout {
+  display: block;
+  margin: 20px auto 0;     /* was 24px */
+}
+
+/* EMPTY STATE */
+.empty-state {
+  padding: 12px;           /* was 16px */
+  text-align: center;
+  color: #aaa;
+  background: #111;
+  border-radius: 8px;
+}
+
+/* LIST SECTION */
+.list-section {
+  background: #050505;
+  border-radius: 10px;
+  border: 1px solid #222;
+  padding: 6px 14px 12px;  /* was 5px 16px 16px */
+  margin-top: 10px;        /* was 12px */
+}
+
+/* inside .list-section box */
+.list-section .anime-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* each anime row/card */
+.list-section .anime-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;       /* was 10px 14px */
+  margin: 5px 0;           /* was 6px 0 */
+  background: #111;
+  border-radius: 8px;
+}
+
+.list-section .anime-list li:last-child {
+  border-bottom: none;
+}
+
+/* empty message inside the box */
+.list-section .empty-state {
+  text-align: center;
+  padding: 12px 0;         /* was 16px 0 */
+  color: #aaa;
+}
+
+/* USER BOX */
+.user-box {
+  position: fixed;
+  top: 14px;               /* was 18px */
+  right: 30px;             /* was 40px */
+  display: flex;
+  align-items: center;
+  gap: 8px;                /* was 12px */
+  padding: 5px 10px;       /* was 6px 12px */
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 9px;
+  border: 1px solid #333;
+  font-size: 13px;         /* was 0.9rem */
+  color: #ccc;
+  z-index: 100;
+}
+
+.user-box #userEmail {
+  max-width: 200px;        /* was 220px */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* logout pill in user-box */
+.logout {
+  margin: 10px;
+  padding: 5px 10px;       /* was 6px 12px */
+  border-radius: 9px;
+  border: none;
+  background: #222;
+  color: #eee;
+  cursor: pointer;
+  font-size: 13px;
+}
+.logout:hover {
+  background: #ff4d4d;
+  color: #fff;
+}
