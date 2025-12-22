@@ -1,4 +1,4 @@
-const API = "http://localhost:5000/api";
+const API = "https://anime-tracker-api-s0xh.onrender.com";
 
 /* =====================
 AUTH HELPERS
