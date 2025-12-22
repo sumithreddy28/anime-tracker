@@ -17,9 +17,9 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/anime", animeRoutes);
 
-/* PORT — REQUIRED FOR DEPLOYMENT */
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Backend running on port ${PORT}`);
 });
+
