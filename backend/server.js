@@ -8,6 +8,20 @@ import animeRoutes from "./routes/anime.routes.js";
 dotenv.config();
 
 const app = express();
+/*===================== */
+import pool from "./db.js";
+
+(async () => {
+  try {
+    const conn = await pool.getConnection();
+    console.log("✅ MySQL connected");
+    conn.release();
+  } catch (err) {
+    console.error("❌ MySQL connection failed:", err.message);
+  }
+})();
+/*===================== */
+
 
 /* MIDDLEWARE */
 app.use(cors());
