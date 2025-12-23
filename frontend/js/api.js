@@ -1,4 +1,4 @@
-const API = "https://anime-tracker-api-s0xh.onrender.com";
+const API = "https://anime-tracker-api-s0xh.onrender.com/api";
 
 /* =====================
 AUTH HELPERS
