@@ -5,8 +5,9 @@ import dotenv from "dotenv";
 import authRoutes from "./routes/auth.routes.js";
 import animeRoutes from "./routes/anime.routes.js";
 
-dotenv.config();
-
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config();
+}
 const app = express();
 /*===================== */
 import pool from "./db.js";
@@ -31,7 +32,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/anime", animeRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, () => {
   console.log(`Backend running on http://localhost:${PORT}`);
