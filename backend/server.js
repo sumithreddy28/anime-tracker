@@ -25,7 +25,11 @@ import pool from "./db.js";
 
 
 /* MIDDLEWARE */
-app.use(cors());
+app.use(cors({
+  origin: "https://anime-tracker-api.netlify.app",
+  credentials: true
+}));
+
 app.use(express.json());
 
 /* ROUTES */
